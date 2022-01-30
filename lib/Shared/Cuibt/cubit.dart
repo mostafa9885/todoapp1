@@ -35,6 +35,10 @@ class AppCubit extends Cubit <AppStates>
     emit(AppBottomNavigationBarIndexState());
   }
 
+
+
+
+
   late Database database;
   List<Map> newTask = [];
   List<Map> doneTask = [];
@@ -70,6 +74,14 @@ class AppCubit extends Cubit <AppStates>
     );
   }
 
+
+
+
+
+
+
+
+
   insertToDatabase({
     required String title,
     required String date,
@@ -90,6 +102,14 @@ class AppCubit extends Cubit <AppStates>
     }
     );
   }
+
+
+
+
+
+
+
+
 
   void getDataFromDatabase(database)
   {
@@ -129,6 +149,15 @@ class AppCubit extends Cubit <AppStates>
       emit(AppDeleteDatabaseState());
     });
   }
+
+
+
+
+
+
+
+
+
 
 
   bool isbottomSheet = false;

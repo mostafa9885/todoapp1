@@ -23,12 +23,14 @@ Widget TextFromFieldDefualt({
   double hintStyleFS = 15,
   double borderSideWidth = 3,
   double borderRadiusCircular = 13,
+  bool isReadOnly = false,
 }) =>
     TextFormField(
       validator: validator,
       controller: controller,
       onTap: onTap,
       keyboardType: keyboardType,
+      readOnly: isReadOnly,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(

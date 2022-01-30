@@ -77,6 +77,7 @@ class LayoutHome extends StatelessWidget {
                               ),
                               const SizedBox(height: 15),
                               TextFromFieldDefualt(
+                                isReadOnly: true,
                                 controller: DateController,
                                 label: 'Date Task',
                                 hintText: 'Enter Date Task',
@@ -102,6 +103,7 @@ class LayoutHome extends StatelessWidget {
                               ),
                               const SizedBox(height: 15),
                               TextFromFieldDefualt(
+                                isReadOnly: true,
                                 controller: TimeController,
                                 label: 'Time Task',
                                 hintText: 'Enter Time Task',
@@ -128,6 +130,7 @@ class LayoutHome extends StatelessWidget {
                         ),
                       ),
                   ).closed.then((value){
+                    clearText();
                     cubit.ChangeBottomSheet(
                         isShow: false,
                         icon: const Icon(Icons.edit)
@@ -171,4 +174,14 @@ class LayoutHome extends StatelessWidget {
       ),
     );
   }
+
+  void clearText()
+  {
+    TaskController.clear();
+    DateController.clear();
+    TimeController.clear();
+  }
+
+
+
 }
